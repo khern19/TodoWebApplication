@@ -84,8 +84,14 @@ WSGI_APPLICATION = 'todoproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'arqivedb',
+            'USER': 'arqivemaster',
+            'PASSWORD': 'secretarqive',
+            'HOST': 'database-1.cake6tjozc5q.us-east-1.rds.amazonaws.com',
+            'PORT': '5432',
+        }
     }
 }
 
