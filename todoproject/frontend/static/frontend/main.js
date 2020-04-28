@@ -1526,7 +1526,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _act
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _errors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors */ \"./todoproject/frontend/src/reducers/errors.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './messages'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth */ \"./todoproject/frontend/src/reducers/auth.js\");\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  todo: !(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),\n  errors: _errors__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  messages: !(function webpackMissingModule() { var e = new Error(\"Cannot find module './messages'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),\n  auth: _auth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _errors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors */ \"./todoproject/frontend/src/reducers/errors.js\");\n/* harmony import */ var _messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./messages */ \"./todoproject/frontend/src/reducers/messages.js\");\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth */ \"./todoproject/frontend/src/reducers/auth.js\");\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  todo: !(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),\n  errors: _errors__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  messages: _messages__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  auth: _auth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/index.js?");
+
+/***/ }),
+
+/***/ "./todoproject/frontend/src/reducers/messages.js":
+/*!*******************************************************!*\
+  !*** ./todoproject/frontend/src/reducers/messages.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar initialState = {};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CREATE_MESSAGE\"]:\n      return state = action.payload;\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/messages.js?");
 
 /***/ }),
 
