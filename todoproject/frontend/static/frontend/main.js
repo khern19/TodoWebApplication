@@ -1494,6 +1494,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 
 /***/ }),
 
+/***/ "./todoproject/frontend/src/reducers/auth.js":
+/*!***************************************************!*\
+  !*** ./todoproject/frontend/src/reducers/auth.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./todoproject/frontend/src/actions/types.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\nvar initialState = {\n  token: localStorage.getItem(\"token\"),\n  isAuthenticated: null,\n  isLoading: false,\n  user: null,\n  users: []\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"USER_LOADING\"]:\n      return _objectSpread({}, state, {\n        isLoading: true\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"USER_LOADED\"]:\n      return _objectSpread({}, state, {\n        isAuthenticated: true,\n        isLoading: false,\n        user: action.payload\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGIN_SUCCESS\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"REGISTER_SUCCESS\"]:\n      localStorage.setItem(\"token\", action.payload.token);\n      return _objectSpread({}, state, {}, action.payload, {\n        isAuthenticated: true,\n        isLoading: false\n      });\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"AUTH_ERROR\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGIN_FAIL\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"LOGOUT_SUCCESS\"]:\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"REGISTER_FAIL\"]:\n      localStorage.removeItem(\"token\");\n      return _objectSpread({}, state, {\n        token: null,\n        user: null,\n        isAuthenticated: false,\n        isLoading: false\n      });\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/auth.js?");
+
+/***/ }),
+
+/***/ "./todoproject/frontend/src/reducers/errors.js":
+/*!*****************************************************!*\
+  !*** ./todoproject/frontend/src/reducers/errors.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar initialState = {\n  msg: {},\n  status: null\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"GET_ERRORS\"]:\n      return {\n        msg: action.payload.msg,\n        status: action.payload.status\n      };\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/errors.js?");
+
+/***/ }),
+
+/***/ "./todoproject/frontend/src/reducers/index.js":
+/*!****************************************************!*\
+  !*** ./todoproject/frontend/src/reducers/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _errors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors */ \"./todoproject/frontend/src/reducers/errors.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './messages'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth */ \"./todoproject/frontend/src/reducers/auth.js\");\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  todo: !(function webpackMissingModule() { var e = new Error(\"Cannot find module './todo'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),\n  errors: _errors__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  messages: !(function webpackMissingModule() { var e = new Error(\"Cannot find module './messages'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),\n  auth: _auth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/index.js?");
+
+/***/ }),
+
 /***/ "./todoproject/frontend/src/store.js":
 /*!*******************************************!*\
   !*** ./todoproject/frontend/src/store.js ***!
@@ -1502,7 +1538,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-devtools-extension */ \"./node_modules/redux-devtools-extension/index.js\");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './reducers'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\n\n\n\nvar initialState = {};\nvar middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_2__[\"default\"]];\nvar store = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(!(function webpackMissingModule() { var e = new Error(\"Cannot find module './reducers'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__[\"composeWithDevTools\"])(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"].apply(void 0, middleware)));\n/* harmony default export */ __webpack_exports__[\"default\"] = (store);\n\n//# sourceURL=webpack:///./todoproject/frontend/src/store.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-devtools-extension */ \"./node_modules/redux-devtools-extension/index.js\");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducers */ \"./todoproject/frontend/src/reducers/index.js\");\n\n\n\n\nvar initialState = {};\nvar middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_2__[\"default\"]];\nvar store = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(_reducers__WEBPACK_IMPORTED_MODULE_4__[\"default\"], initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__[\"composeWithDevTools\"])(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"].apply(void 0, middleware)));\n/* harmony default export */ __webpack_exports__[\"default\"] = (store);\n\n//# sourceURL=webpack:///./todoproject/frontend/src/store.js?");
 
 /***/ })
 
