@@ -1,6 +1,6 @@
 # TodoWebApplication
 
-first terminal
+### first terminal
 
 1. install Python 3.7, pip 
 
@@ -18,7 +18,7 @@ first terminal
 
 1. python manage.py runserver
 
-# second terminal
+### second terminal
 
 1. install latest version of node
 
