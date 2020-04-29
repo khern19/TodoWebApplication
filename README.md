@@ -1,5 +1,7 @@
 # TodoWebApplication
 
+### copy what is inside db.txt into the database section in the seetings.py
+
 ### first terminal
 
 1. install Python 3.7, pip 
@@ -26,6 +28,5 @@
 
 1. npm run dev
 
-### copy what is inside db.txt in the database section in the seetings.py
 
 clear cache in browser
