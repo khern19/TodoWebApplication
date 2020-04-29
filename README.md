@@ -1,6 +1,6 @@
 # TodoWebApplication
 
-### copy what is inside db.txt into the database section in the seetings.py
+* copy what is inside db.txt into the database section in the seetings.py
 
 ### first terminal
 
