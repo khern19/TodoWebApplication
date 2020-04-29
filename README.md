@@ -26,4 +26,6 @@
 
 1. npm run dev
 
+### copy what is inside db.txt in the database section in the seetings.py
+
 clear cache in browser
